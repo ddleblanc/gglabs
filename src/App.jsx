@@ -1,5 +1,6 @@
 import Hero from './components/Hero';
-import Stats from './components/Stats';
+// Trigger HMR update
+// import Stats from './components/Stats';
 import Ecosystem from './components/Ecosystem';
 import Features from './components/Features';
 import Partners from './components/Partners';
@@ -9,7 +10,6 @@ function App() {
     return (
         <main className="w-full bg-bg text-text selection:bg-accent selection:text-black">
             <Hero />
-            <Stats />
             <Features />
             <Ecosystem />
             <Partners />

@@ -139,6 +139,13 @@
         0 0 20px rgba(217, 0, 255, 0.4) !important;
 }
 
+.neon-blue {
+    color: var(--neon-blue, #00b7ff) !important;
+    text-shadow:
+        0 0 10px rgba(0, 68, 255, 0.8),
+        0 0 20px rgba(25, 0, 255, 0.4) !important;
+}
+
 /* --- Phase 1: Identity (GG LABS) --- */
 .hero-title {
     font-size: 15vw;

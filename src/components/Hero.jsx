@@ -161,7 +161,7 @@ export default function Hero() {
                     <div className="text-phase phase-2 pointer-events-none">
                         <motion.div
                             style={{
-                                opacity: useTransform(scrollYProgress, [0.15, 0.25, 0.45, 0.55], [0, 1, 1, 0]),
+                                opacity: useTransform(scrollYProgress, [0.15, 0.25, 0.35, 0.45], [0, 1, 1, 0]),
                                 scale: useTransform(scrollYProgress, [0.15, 0.35], [0.95, 1])
                             }}
                             className="hero-center-content"
@@ -181,8 +181,8 @@ export default function Hero() {
                     <div className="text-phase phase-3">
                         <motion.div
                             style={{
-                                opacity: useTransform(scrollYProgress, [0.5, 0.6, 0.8, 0.9], [0, 1, 1, 0]),
-                                y: useTransform(scrollYProgress, [0.5, 0.8], [0, -50])
+                                opacity: useTransform(scrollYProgress, [0.4, 0.5, 0.6, 0.7], [0, 1, 1, 0]),
+                                y: useTransform(scrollYProgress, [0.4, 0.7], [20, -20])
                             }}
                             className="hero-brands-wrapper"
                         >
@@ -196,12 +196,39 @@ export default function Hero() {
                         </motion.div>
                     </div>
 
-                    {/* Phase 4: Final Call */}
+                    {/* Phase 4: Stats */}
+                    <div className="text-phase phase-4 pointer-events-none">
+                        <motion.div
+                            style={{
+                                opacity: useTransform(scrollYProgress, [0.65, 0.75, 0.85, 0.95], [0, 1, 1, 0]),
+                                y: useTransform(scrollYProgress, [0.65, 0.8], [30, 0])
+                            }}
+                            className="hero-stats-container w-full max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8"
+                        >
+                            {[
+                                { label: "Projects Incubated", value: "25+" },
+                                { label: "Total Raised", value: "$40M+" },
+                                { label: "Community", value: "250K+" },
+                                { label: "Market Cap", value: "$120M" },
+                            ].map((stat, index) => (
+                                <div key={index} className="text-center group">
+                                    <h3 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 group-hover:text-accent transition-colors duration-300">
+                                        {stat.value}
+                                    </h3>
+                                    <p className="text-xs md:text-sm uppercase tracking-widest text-white/70 mt-2 group-hover:text-white transition-colors duration-300">
+                                        {stat.label}
+                                    </p>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </div>
+
+                    {/* Phase 5: Final Call */}
                     <motion.div
-                        style={{ opacity: useTransform(scrollYProgress, [0.85, 0.95, 1], [0, 1, 1]) }}
+                        style={{ opacity: useTransform(scrollYProgress, [0.9, 0.95, 1], [0, 1, 1]) }}
                         className="text-phase phase-5"
                     >
-                        <h2 className="hero-final-text neon-green">
+                        <h2 className="hero-final-text neon-blue">
                             GAME ON
                         </h2>
                     </motion.div>
