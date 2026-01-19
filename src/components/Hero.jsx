@@ -133,19 +133,27 @@ export default function Hero() {
                     </div>
                 )}
 
+                {/* Fade to Black Overlay (Last 2 Sections) */}
+                <motion.div
+                    className="fade-overlay"
+                    style={{
+                        opacity: useTransform(scrollYProgress, [0.65, 0.95], [0, 1])
+                    }}
+                />
+
                 <div className="text-overlay-container">
                     {/* Phase 1: Intro - GG LABS */}
                     <div className="text-phase phase-1">
-                        <motion.h1
+                        <motion.img
+                            src="/assets/logo.png"
+                            alt="GG LABS Logo"
                             style={{
                                 opacity: useTransform(scrollYProgress, [0, 0.1, 0.2], [1, 1, 0]),
                                 y: useTransform(scrollYProgress, [0, 0.2], [0, -50]),
                                 scale: useTransform(scrollYProgress, [0, 0.2], [1, 1.2])
                             }}
-                            className="hero-title"
-                        >
-                            GG LABS
-                        </motion.h1>
+                            className="hero-logo w-[60vw] md:w-[30vw] max-w-[500px] object-contain drop-shadow-xl"
+                        />
                         <motion.p
                             style={{
                                 opacity: useTransform(scrollYProgress, [0, 0.1, 0.2], [1, 1, 0]),
@@ -167,12 +175,12 @@ export default function Hero() {
                             className="hero-center-content"
                         >
                             {/* Changed to neon-purple for complementary contrast */}
-                            <h2 className="hero-stat-number neon-blue">GET GOOD</h2>
+                            <h2 className="hero-stat-number">GET GOOD</h2>
                             <p className="hero-description">GG IS THE UTILITY TOKEN OF THE GG LABS PLATFORM</p>
 
                             <div className="hero-actions pointer-events-auto">
-                                <button className="hero-btn primary">BUY GG</button>
-                                <button className="hero-btn secondary">WHITEPAPER</button>
+                                <button className="hero-btn primary">WHITEPAPER</button>
+                                <button className="hero-btn secondary">BUY GG</button>
                             </div>
                         </motion.div>
                     </div>
@@ -182,7 +190,7 @@ export default function Hero() {
                         <motion.div
                             style={{
                                 opacity: useTransform(scrollYProgress, [0.4, 0.5, 0.6, 0.7], [0, 1, 1, 0]),
-                                y: useTransform(scrollYProgress, [0.4, 0.7], [20, -20])
+                                y: useTransform(scrollYProgress, [0.4, 0.7], [40, -40])
                             }}
                             className="hero-brands-wrapper"
                         >
