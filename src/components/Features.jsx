@@ -36,8 +36,8 @@ export default function Features() {
                                 <h3 className="text-4xl font-black mb-4 font-gaming text-white drop-shadow-lg">LAUNCHPAD</h3>
                                 <p className="text-gray-200 text-xl font-gaming tracking-wide drop-shadow-md max-w-md">Premium access to the hottest IDOs in gaming. Stake GG tokens to get guaranteed allocation.</p>
                             </div>
-                            <button className="w-fit mt-8 px-8 py-4 rounded-none -skew-x-10 bg-text text-black font-black font-gaming border-2 border-transparent hover:bg-accent hover:border-accent transition-all flex items-center gap-2 group-hover:gap-4 uppercase tracking-wider shadow-neon">
-                                <span className="skew-x-10 inline-block">Explore Launchpad</span> <span className="skew-x-10 inline-block">→</span>
+                            <button className="w-fit mt-8 px-8 py-4 rounded-none -skew-x-10 bg-black text-white font-black font-gaming border-2 border-transparent hover:bg-accent hover:border-accent transition-all flex items-center gap-2 group-hover:gap-4 uppercase tracking-wider shadow-neon">
+                                <span className="skew-x-10 inline-block text-white">Explore Launchpad</span> <span className="skew-x-10 inline-block">→</span>
                             </button>
                         </div>
                     </motion.div>
