@@ -371,7 +371,8 @@
         0 0 10px rgba(255, 255, 255, 0.8),
         0 0 20px var(--neon-green),
         0 0 40px var(--neon-green);
-    animation: flicker 4s infinite;
+    /* animation: flicker 4s infinite; */
+    will-change: opacity;
 }
 
 @keyframes flicker {
@@ -460,5 +461,6 @@
     background: black;
     pointer-events: none;
     z-index: 5;
+    will-change: opacity;
     /* Above canvas (0), below text (10) */
 }
