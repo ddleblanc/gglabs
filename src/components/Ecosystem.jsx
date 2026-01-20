@@ -32,9 +32,10 @@ export default function Ecosystem() {
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.2 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
                             whileHover={{ y: -10, scale: 1.02 }}
-                            className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-bg-secondary border border-white/10 hover:border-accent/50 cursor-pointer shadow-2xl transition-all duration-300"
+                            className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-bg-secondary border border-white/10 hover:border-accent/50 cursor-pointer shadow-2xl transition-colors duration-300"
                         >
                             {/* Image with Zoom Effect */}
                             <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">

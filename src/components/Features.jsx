@@ -10,7 +10,7 @@ export default function Features() {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-6xl font-bold mb-6"
                     >
-                        The <span className="text-accent">GG</span> Ecosystem
+                        Incubation <span className="text-accent">Station</span>
                     </motion.h2>
                     <p className="text-lg text-text-dim max-w-2xl">
                         A complete suite of tools designed to accelerate crypto gaming projects from concept to launch.
@@ -21,7 +21,11 @@ export default function Features() {
                     {/* Feature 1 - Large Left - Launchpad */}
                     <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="md:col-span-2 row-span-2 rounded-3xl p-8 md:p-12 relative overflow-hidden group border border-white/10 hover:border-accent/50 transition-all duration-500 shadow-2xl"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="md:col-span-2 row-span-2 rounded-3xl p-8 md:p-12 relative overflow-hidden group border border-white/10 hover:border-accent/50 transition-colors duration-500 shadow-2xl"
                     >
                         {/* Background Image */}
                         <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/assets/gaming/card_launchpad.png)' }} />
@@ -32,7 +36,7 @@ export default function Features() {
                                 <h3 className="text-4xl font-black mb-4 font-gaming text-white drop-shadow-lg">LAUNCHPAD</h3>
                                 <p className="text-gray-200 text-xl font-gaming tracking-wide drop-shadow-md max-w-md">Premium access to the hottest IDOs in gaming. Stake GG tokens to get guaranteed allocation.</p>
                             </div>
-                            <button className="w-fit mt-8 px-8 py-4 rounded-none -skew-x-10 bg-accent text-black font-black font-gaming border-2 border-transparent hover:bg-white hover:border-accent transition-all flex items-center gap-2 group-hover:gap-4 uppercase tracking-wider shadow-neon">
+                            <button className="w-fit mt-8 px-8 py-4 rounded-none -skew-x-10 bg- text-black font-black font-gaming border-2 border-transparent hover:bg-white hover:border-accent transition-all flex items-center gap-2 group-hover:gap-4 uppercase tracking-wider shadow-neon">
                                 <span className="skew-x-10 inline-block">Explore Launchpad</span> <span className="skew-x-10 inline-block">→</span>
                             </button>
                         </div>
@@ -41,7 +45,11 @@ export default function Features() {
                     {/* Feature 2 - Top Right - Staking */}
                     <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="rounded-3xl p-8 relative overflow-hidden group border border-white/10 hover:border-neon-purple/50 transition-all duration-500 shadow-xl"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="rounded-3xl p-8 relative overflow-hidden group border border-white/10 hover:border-neon-purple/50 transition-colors duration-500 shadow-xl"
                     >
                         <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/assets/gaming/card_staking.png)' }} />
                         <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-500" />
@@ -60,7 +68,11 @@ export default function Features() {
                     {/* Feature 3 - Bottom Right - Governance */}
                     <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="rounded-3xl p-8 relative overflow-hidden group border border-white/10 hover:border-neon-blue/50 transition-all duration-500 shadow-xl flex flex-col justify-end"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        className="rounded-3xl p-8 relative overflow-hidden group border border-white/10 hover:border-neon-blue/50 transition-colors duration-500 shadow-xl flex flex-col justify-end"
                     >
                         <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: 'url(/assets/gaming/card_governance.png)' }} />
                         <div className="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-colors duration-500" />
