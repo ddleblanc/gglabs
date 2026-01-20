@@ -137,7 +137,7 @@ export default function Hero() {
                 <motion.div
                     className="fade-overlay"
                     style={{
-                        opacity: useTransform(scrollYProgress, [0.65, 0.95], [0, 1])
+                        opacity: useTransform(smoothProgress, [0.65, 0.95], [0, 1])
                     }}
                 />
 
@@ -148,16 +148,16 @@ export default function Hero() {
                             src="/assets/logo.png"
                             alt="GG LABS Logo"
                             style={{
-                                opacity: useTransform(scrollYProgress, [0, 0.1, 0.2], [1, 1, 0]),
-                                y: useTransform(scrollYProgress, [0, 0.2], [0, -50]),
-                                scale: useTransform(scrollYProgress, [0, 0.2], [1, 1.2])
+                                opacity: useTransform(smoothProgress, [0, 0.1, 0.2], [1, 1, 0]),
+                                y: useTransform(smoothProgress, [0, 0.2], [0, -50]),
+                                scale: useTransform(smoothProgress, [0, 0.2], [1, 1.2])
                             }}
                             className="hero-logo w-[60vw] md:w-[30vw] max-w-[500px] object-contain drop-shadow-xl"
                         />
                         <motion.p
                             style={{
-                                opacity: useTransform(scrollYProgress, [0, 0.1, 0.2], [1, 1, 0]),
-                                y: useTransform(scrollYProgress, [0, 0.2], [0, -30])
+                                opacity: useTransform(smoothProgress, [0, 0.1, 0.2], [1, 1, 0]),
+                                y: useTransform(smoothProgress, [0, 0.2], [0, -30])
                             }}
                             className="hero-role"
                         >
@@ -169,8 +169,8 @@ export default function Hero() {
                     <div className="text-phase phase-2 pointer-events-none">
                         <motion.div
                             style={{
-                                opacity: useTransform(scrollYProgress, [0.15, 0.25, 0.35, 0.45], [0, 1, 1, 0]),
-                                scale: useTransform(scrollYProgress, [0.15, 0.35], [0.95, 1])
+                                opacity: useTransform(smoothProgress, [0.15, 0.25, 0.35, 0.45], [0, 1, 1, 0]),
+                                scale: useTransform(smoothProgress, [0.15, 0.35], [0.95, 1])
                             }}
                             className="hero-center-content"
                         >
@@ -193,8 +193,8 @@ export default function Hero() {
                     <div className="text-phase phase-3">
                         <motion.div
                             style={{
-                                opacity: useTransform(scrollYProgress, [0.4, 0.5, 0.6, 0.7], [0, 1, 1, 0]),
-                                y: useTransform(scrollYProgress, [0.4, 0.7], [40, -40])
+                                opacity: useTransform(smoothProgress, [0.4, 0.5, 0.6, 0.7], [0, 1, 1, 0]),
+                                y: useTransform(smoothProgress, [0.4, 0.7], [40, -40])
                             }}
                             className="hero-brands-wrapper"
                         >
@@ -216,8 +216,8 @@ export default function Hero() {
                     <div className="text-phase phase-4 pointer-events-none">
                         <motion.div
                             style={{
-                                opacity: useTransform(scrollYProgress, [0.65, 0.75, 0.85, 0.95], [0, 1, 1, 0]),
-                                y: useTransform(scrollYProgress, [0.65, 0.8], [30, 0])
+                                opacity: useTransform(smoothProgress, [0.65, 0.75, 0.85, 0.95], [0, 1, 1, 0]),
+                                y: useTransform(smoothProgress, [0.65, 0.8], [30, 0])
                             }}
                             className="hero-stats-container w-full max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8"
                         >
@@ -241,7 +241,7 @@ export default function Hero() {
 
                     {/* Phase 5: Final Call */}
                     <motion.div
-                        style={{ opacity: useTransform(scrollYProgress, [0.9, 0.95, 1], [0, 1, 1]) }}
+                        style={{ opacity: useTransform(smoothProgress, [0.9, 0.95, 1], [0, 1, 1]) }}
                         className="text-phase phase-5"
                     >
                         <h2 className="hero-final-text neon-blue">
@@ -252,7 +252,7 @@ export default function Hero() {
             </div>
 
             <motion.div
-                style={{ opacity: useTransform(scrollYProgress, [0, 0.1], [1, 0]) }}
+                style={{ opacity: useTransform(smoothProgress, [0, 0.1], [1, 0]) }}
                 className="scroll-indicator"
             >
                 SCROLL TO START
