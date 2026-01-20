@@ -2,40 +2,39 @@ import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import SectionHeader from './common/SectionHeader';
 
-const tiers = [
-    {
-        name: "Bronze",
+{
+    name: "Bronze",
         price: "0.1 ETH",
-        supply: "5,000",
-        features: ["Discord Access", "Weekly Newsletter", "Public AMAs"],
-        color: "border-orange-700",
-        glow: "shadow-orange-900/50"
-    },
-    {
-        name: "Silver",
+            supply: "5,000",
+                features: ["Discord Access", "Weekly Newsletter", "Public AMAs"],
+                    color: "border-white/10",
+                        glow: "shadow-none"
+},
+{
+    name: "Silver",
         price: "0.3 ETH",
-        supply: "2,000",
-        features: ["Everything in Bronze", "1x Launchpad Allocation", "Research Reports", "Governance Voting"],
-        color: "border-gray-400",
-        glow: "shadow-gray-400/30"
-    },
-    {
-        name: "Gold",
+            supply: "2,000",
+                features: ["Everything in Bronze", "1x Launchpad Allocation", "Research Reports", "Governance Voting"],
+                    color: "border-white/20",
+                        glow: "shadow-white/5"
+},
+{
+    name: "Gold",
         price: "1 ETH",
-        supply: "500",
-        popular: true,
-        features: ["Everything in Silver", "3x Launchpad Allocation", "Private AMAs", "+10% Revenue Share"],
-        color: "border-yellow-400",
-        glow: "shadow-yellow-400/30"
-    },
-    {
-        name: "Diamond",
+            supply: "500",
+                popular: true,
+                    features: ["Everything in Silver", "3x Launchpad Allocation", "Private AMAs", "+10% Revenue Share"],
+                        color: "border-accent",
+                            glow: "shadow-neon"
+},
+{
+    name: "Diamond",
         price: "5 ETH",
-        supply: "50",
-        features: ["Everything in Gold", "10x Launchpad Allocation", "1:1 Advisory Call", "Advisory Board Seat"],
-        color: "border-cyan-400",
-        glow: "shadow-cyan-400/30"
-    }
+            supply: "50",
+                features: ["Everything in Gold", "10x Launchpad Allocation", "1:1 Advisory Call", "Advisory Board Seat"],
+                    color: "border-metallic",
+                        glow: "shadow-lg shadow-metallic/20"
+}
 ];
 
 export default function Membership() {
@@ -58,11 +57,11 @@ export default function Membership() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className={`relative p-8 rounded-3xl bg-bg-secondary border-2 ${tier.color} ${tier.glow} hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full ${tier.popular ? 'scale-105 z-10 shadow-[0_0_40px_rgba(255,215,0,0.15)] ring-1 ring-yellow-400/50' : 'opacity-90 hover:opacity-100'}`}
+                            className={`relative p-8 rounded-3xl bg-bg-secondary border ${tier.color} ${tier.glow} hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full ${tier.popular ? 'scale-105 z-10 ring-1 ring-accent/50' : 'opacity-90 hover:opacity-100'}`}
                         >
                             {tier.popular && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-500 to-yellow-300 text-black font-black font-gaming text-xs px-4 py-1 rounded-full uppercase tracking-widest shadow-lg">
-                                    Most Popular
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-black font-black font-gaming text-xs px-4 py-1 rounded-none uppercase tracking-widest shadow-neon skew-x-[-10deg]">
+                                    <span className="inline-block skew-x-[10deg]">Most Popular</span>
                                 </div>
                             )}
 
@@ -82,8 +81,8 @@ export default function Membership() {
                             </ul>
 
                             <button className={`w-full py-4 rounded-xl font-bold font-gaming uppercase tracking-wider transition-all ${tier.popular
-                                    ? 'bg-accent text-black hover:bg-white hover:scale-105 shadow-neon'
-                                    : 'bg-white/10 text-white hover:bg-white hover:text-black border border-white/5'
+                                ? 'bg-accent text-black hover:bg-white hover:scale-105 shadow-neon'
+                                : 'bg-white/10 text-white hover:bg-white hover:text-black border border-white/5'
                                 }`}>
                                 Mint Now
                             </button>

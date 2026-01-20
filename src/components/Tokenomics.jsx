@@ -3,12 +3,12 @@ import SectionHeader from './common/SectionHeader';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 const data = [
-    { name: 'Ecosystem', value: 30, color: '#23ffca' }, // accent
-    { name: 'Public Sale', value: 20, color: '#3b82f6' }, // neon-blue
-    { name: 'Treasury', value: 20, color: '#c084fc' }, // neon-purple
-    { name: 'Team', value: 15, color: '#ffffff' }, // white
-    { name: 'Liquidity', value: 10, color: '#9ca3af' }, // gray
-    { name: 'Strategic', value: 5, color: '#4b5563' }, // dark gray
+    { name: 'Ecosystem', value: 30, color: '#2DD4BF' }, // accent (Teal-400)
+    { name: 'Public Sale', value: 20, color: '#14B8A6' }, // accent-dark (Teal-500)
+    { name: 'Treasury', value: 20, color: '#FAFAFA' }, // text (White)
+    { name: 'Team', value: 15, color: '#94A3B8' }, // metallic (Slate-400)
+    { name: 'Liquidity', value: 10, color: '#475569' }, // Slate-600
+    { name: 'Strategic', value: 5, color: '#1e293b' }, // Slate-800
 ];
 
 const utilities = [

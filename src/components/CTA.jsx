@@ -43,13 +43,13 @@ export default function CTA() {
                     </div>
 
                     {/* Card 3: Community */}
-                    <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-neon-purple/50 transition-all flex flex-col items-start justify-between h-[300px] group">
+                    <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-metallic/50 transition-all flex flex-col items-start justify-between h-[300px] group">
                         <div>
-                            <h3 className="text-2xl font-black font-gaming text-neon-purple mb-2">COMMUNITY</h3>
+                            <h3 className="text-2xl font-black font-gaming text-metallic mb-2">COMMUNITY</h3>
                             <p className="text-text-dim">Join the DAO and start earning rewards today.</p>
                         </div>
                         <button className="flex items-center gap-3 text-white font-bold uppercase tracking-widest group-hover:gap-5 transition-all">
-                            Join Discord <ArrowRight className="text-neon-purple" />
+                            Join Discord <ArrowRight className="text-metallic" />
                         </button>
                     </div>
                 </div>
