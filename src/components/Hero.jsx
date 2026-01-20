@@ -175,7 +175,11 @@ export default function Hero() {
                             className="hero-center-content"
                         >
                             {/* Changed to neon-purple for complementary contrast */}
-                            <h2 className="hero-stat-number">GET GOOD</h2>
+                            <img
+                                src="/assets/getgood.png"
+                                alt="GET GOOD"
+                                className="w-[80vw] md:w-[50vw] max-w-[800px] object-contain drop-shadow-2xl mb-4"
+                            />
                             <p className="hero-description">GG IS THE UTILITY TOKEN OF THE GG LABS PLATFORM</p>
 
                             <div className="hero-actions pointer-events-auto">
@@ -194,7 +198,11 @@ export default function Hero() {
                             }}
                             className="hero-brands-wrapper"
                         >
-                            <h2 className="hero-section-title">PARTY UP WITH</h2>
+                            <img
+                                src="/assets/goodguild.png"
+                                alt="PARTY UP WITH"
+                                className="w-[70vw] md:w-[40vw] max-w-[600px] object-contain drop-shadow-lg mb-8"
+                            />
                             <div className="partners-grid">
                                 <span>BINANCE</span>
                                 <span>POLYGON</span>
