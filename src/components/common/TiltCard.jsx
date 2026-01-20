@@ -1,17 +1,27 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function TiltCard({ children, className = "" }) {
     const ref = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
 
-    // Check if device is touch-enabled
-    const isTouch = typeof window !== "undefined" && window.matchMedia("(hover: none)").matches;
+    useEffect(() => {
+        const checkMobile = () => {
+            // Use width-based detection for more reliable "mobile vs desktop" distinction
+            // This ensures touch-capable laptops still get the premium effect
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     // Mouse position values
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
-    // Smooth spring physics for rotation (only active if not touch)
+    // Smooth spring physics for rotation (only active if not mobile)
     const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [15, -15]), {
         stiffness: 150,
         damping: 20,
@@ -27,7 +37,7 @@ export default function TiltCard({ children, className = "" }) {
     const glareY = useTransform(y, [-0.5, 0.5], ["0%", "100%"]);
 
     function handleMouseMove(e) {
-        if (!ref.current || isTouch) return;
+        if (!ref.current || isMobile) return;
 
         const rect = ref.current.getBoundingClientRect();
 
@@ -49,7 +59,7 @@ export default function TiltCard({ children, className = "" }) {
         y.set(0);
     }
 
-    if (isTouch) {
+    if (isMobile) {
         return <div className={`relative ${className}`}>{children}</div>;
     }
 

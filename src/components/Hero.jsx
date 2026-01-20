@@ -145,7 +145,7 @@ export default function Hero() {
                     {/* Phase 1: Intro - GG LABS */}
                     <div className="text-phase phase-1">
                         <motion.img
-                            src="/assets/logo.png"
+                            src="/assets/logo2.png"
                             alt="GG LABS Logo"
                             style={{
                                 opacity: useTransform(smoothProgress, [0, 0.1, 0.2], [1, 1, 0]),
