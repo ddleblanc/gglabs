@@ -32,7 +32,7 @@ export default function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-text-dim">
-                    <p>&copy; 2024 GG LABS. All rights reserved.</p>
+                    <p>&copy; 2026 GG LABS. All rights reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <a href="#" className="hover:text-white">Privacy Policy</a>
                         <a href="#" className="hover:text-white">Terms of Service</a>
