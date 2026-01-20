@@ -10,7 +10,7 @@ export default function Features() {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-6xl font-black mb-6 font-gaming"
                     >
-                        SPAWN <span className="text-accent">POINT</span>
+                        GG <span className="text-accent">LABS</span>
                     </motion.h2>
                     <p className="text-lg text-text-dim max-w-2xl">
                         A complete suite of tools designed to accelerate crypto gaming projects from concept to launch.
