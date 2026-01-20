@@ -3,7 +3,7 @@ import { useScroll, useTransform, motion, useSpring } from 'framer-motion';
 import './Hero.css';
 
 const FRAME_COUNT = 244; // Total number of frames (updated for gaming assets)
-const SCROLL_HEIGHT = 16000; // Total scrollable height in pixels (increased for longer sequence)
+const SCROLL_HEIGHT = 8000; // Total scrollable height in pixels (increased for longer sequence)
 
 export default function Hero() {
     const canvasRef = useRef(null);
