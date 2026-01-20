@@ -4,11 +4,14 @@ import { useRef } from "react";
 export default function TiltCard({ children, className = "" }) {
     const ref = useRef(null);
 
+    // Check if device is touch-enabled
+    const isTouch = typeof window !== "undefined" && window.matchMedia("(hover: none)").matches;
+
     // Mouse position values
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
-    // Smooth spring physics for rotation
+    // Smooth spring physics for rotation (only active if not touch)
     const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [15, -15]), {
         stiffness: 150,
         damping: 20,
@@ -24,7 +27,7 @@ export default function TiltCard({ children, className = "" }) {
     const glareY = useTransform(y, [-0.5, 0.5], ["0%", "100%"]);
 
     function handleMouseMove(e) {
-        if (!ref.current) return;
+        if (!ref.current || isTouch) return;
 
         const rect = ref.current.getBoundingClientRect();
 
@@ -44,6 +47,10 @@ export default function TiltCard({ children, className = "" }) {
     function handleMouseLeave() {
         x.set(0);
         y.set(0);
+    }
+
+    if (isTouch) {
+        return <div className={`relative ${className}`}>{children}</div>;
     }
 
     return (
