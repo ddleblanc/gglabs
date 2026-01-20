@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import TiltCard from './common/TiltCard';
 
 export default function CTA() {
     return (
@@ -21,37 +22,43 @@ export default function CTA() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Card 1: Investors */}
-                    <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-white/30 transition-all flex flex-col items-start justify-between h-[300px] group">
-                        <div>
-                            <h3 className="text-2xl font-black font-gaming text-white mb-2">INVESTORS</h3>
-                            <p className="text-text-dim">Get access to our pitch deck and private sale rounds.</p>
+                    <TiltCard className="h-full group">
+                        <div className="p-8 rounded-3xl bg-white/5 border border-white/10 group-hover:border-white/30 transition-all flex flex-col items-start justify-between h-[300px]">
+                            <div>
+                                <h3 className="text-2xl font-black font-gaming text-white mb-2">INVESTORS</h3>
+                                <p className="text-text-dim">Get access to our pitch deck and private sale rounds.</p>
+                            </div>
+                            <button className="flex items-center gap-3 text-white font-bold uppercase tracking-widest group-hover:gap-5 transition-all">
+                                Request Deck <ArrowRight className="text-accent" />
+                            </button>
                         </div>
-                        <button className="flex items-center gap-3 text-white font-bold uppercase tracking-widest group-hover:gap-5 transition-all">
-                            Request Deck <ArrowRight className="text-accent" />
-                        </button>
-                    </div>
+                    </TiltCard>
 
                     {/* Card 2: Founders */}
-                    <div className="p-8 rounded-3xl bg-accent text-black border border-accent hover:scale-105 transition-all flex flex-col items-start justify-between h-[300px] shadow-neon z-10">
-                        <div>
-                            <h3 className="text-2xl font-black font-gaming text-black mb-2">FOUNDERS</h3>
-                            <p className="text-black/80 font-medium">Have a game-changing idea? Let's build it together.</p>
+                    <TiltCard className="h-full group">
+                        <div className="p-8 rounded-3xl bg-accent text-black border border-accent group-hover:scale-105 transition-all flex flex-col items-start justify-between h-[300px] shadow-neon z-10">
+                            <div>
+                                <h3 className="text-2xl font-black font-gaming text-black mb-2">FOUNDERS</h3>
+                                <p className="text-black/80 font-medium">Have a game-changing idea? Let's build it together.</p>
+                            </div>
+                            <button className="w-full py-4 bg-black text-white font-black font-gaming uppercase tracking-widest rounded-xl hover:bg-white hover:text-black transition-colors">
+                                Apply for Incubation
+                            </button>
                         </div>
-                        <button className="w-full py-4 bg-black text-white font-black font-gaming uppercase tracking-widest rounded-xl hover:bg-white hover:text-black transition-colors">
-                            Apply for Incubation
-                        </button>
-                    </div>
+                    </TiltCard>
 
                     {/* Card 3: Community */}
-                    <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-metallic/50 transition-all flex flex-col items-start justify-between h-[300px] group">
-                        <div>
-                            <h3 className="text-2xl font-black font-gaming text-metallic mb-2">COMMUNITY</h3>
-                            <p className="text-text-dim">Join the DAO and start earning rewards today.</p>
+                    <TiltCard className="h-full group">
+                        <div className="p-8 rounded-3xl bg-white/5 border border-white/10 group-hover:border-metallic/50 transition-all flex flex-col items-start justify-between h-[300px]">
+                            <div>
+                                <h3 className="text-2xl font-black font-gaming text-metallic mb-2">COMMUNITY</h3>
+                                <p className="text-text-dim">Join the DAO and start earning rewards today.</p>
+                            </div>
+                            <button className="flex items-center gap-3 text-white font-bold uppercase tracking-widest group-hover:gap-5 transition-all">
+                                Join Discord <ArrowRight className="text-metallic" />
+                            </button>
                         </div>
-                        <button className="flex items-center gap-3 text-white font-bold uppercase tracking-widest group-hover:gap-5 transition-all">
-                            Join Discord <ArrowRight className="text-metallic" />
-                        </button>
-                    </div>
+                    </TiltCard>
                 </div>
             </div>
         </section>

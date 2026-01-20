@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Gamepad2, Coins, Code, FileCode, Megaphone, Users, HelpingHand, TrendingUp } from 'lucide-react';
 import SectionHeader from './common/SectionHeader';
+import TiltCard from './common/TiltCard';
 
 const services = [
     { title: "Game Design", description: "Crafting immersive gameplay loops and economies.", icon: Gamepad2 },
@@ -24,22 +25,23 @@ export default function Services() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {services.map((service, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="p-8 rounded-2xl bg-bg-secondary border border-white/5 hover:border-accent/40 hover:bg-white/5 transition-all group"
-                        >
-                            <div className="w-12 h-12 bg-black rounded-lg border border-white/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(35,255,202,0.1)]">
-                                <service.icon size={24} />
-                            </div>
-                            <h3 className="text-xl font-bold font-gaming text-white mb-3 group-hover:text-accent transition-colors">{service.title}</h3>
-                            <p className="text-text-dim text-sm leading-relaxed">
-                                {service.description}
-                            </p>
-                        </motion.div>
+                        <TiltCard key={index} className="h-full group">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="h-full p-8 rounded-2xl bg-bg-secondary border border-white/5 group-hover:border-accent/40 group-hover:bg-white/5"
+                            >
+                                <div className="w-12 h-12 bg-black rounded-lg border border-white/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(35,255,202,0.1)]">
+                                    <service.icon size={24} />
+                                </div>
+                                <h3 className="text-xl font-bold font-gaming text-white mb-3 group-hover:text-accent transition-colors">{service.title}</h3>
+                                <p className="text-text-dim text-sm leading-relaxed">
+                                    {service.description}
+                                </p>
+                            </motion.div>
+                        </TiltCard>
                     ))}
                 </div>
             </div>
