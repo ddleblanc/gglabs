@@ -200,16 +200,11 @@ export default function Hero() {
                             }}
                             className="hero-brands-wrapper"
                         >
-                            <img
-                                src="/assets/goodguild.png"
-                                alt="PARTY UP WITH"
-                                className="w-[70vw] md:w-[40vw] max-w-[600px] object-contain drop-shadow-lg mb-8"
-                            />
                             <div className="partners-grid">
-                                <span>BINANCE</span>
-                                <span>POLYGON</span>
-                                <span>IMMUTABLE</span>
-                                <span>EPIC GAMES</span>
+                                <span>INCUBATION</span>
+                                <span>LAUNCHPAD</span>
+                                <span>STAKING</span>
+                                <span>GOVERNANCE</span>
                             </div>
                         </motion.div>
                     </div>
