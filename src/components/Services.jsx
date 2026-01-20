@@ -1,52 +1,48 @@
 import { motion } from 'framer-motion';
-import { Sparkles, Camera, PenTool, Users } from 'lucide-react';
+import { Gamepad2, Coins, Code, FileCode, Megaphone, Users, HelpingHand, TrendingUp } from 'lucide-react';
+import SectionHeader from './common/SectionHeader';
 
 const services = [
-    { title: "Brand Campaigns", description: "Creative direction and makeup artistry for beauty and fashion campaigns.", icon: Camera },
-    { title: "Editorial", description: "High-fashion makeup for magazine spreads and digital features.", icon: PenTool },
-    { title: "Red Carpet", description: "Flawless, long-lasting looks for celebrity appearances and events.", icon: Sparkles },
-    { title: "Masterclasses", description: "Educational sessions sharing techniques and industry insights.", icon: Users },
+    { title: "Game Design", description: "Crafting immersive gameplay loops and economies.", icon: Gamepad2 },
+    { title: "Tokenomics", description: "Sustainable economy design and modeling.", icon: Coins },
+    { title: "Development", description: "Full-stack web3 and game development capability.", icon: Code },
+    { title: "Smart Contracts", description: "Audited, secure, and gas-efficient contracts.", icon: FileCode },
+    { title: "Marketing", description: "Go-to-market strategies and influencer campaigns.", icon: Megaphone },
+    { title: "Community", description: "Building and engaging loyal player bases.", icon: Users },
+    { title: "Partnerships", description: "Access to our network of 500+ industry partners.", icon: HelpingHand },
+    { title: "Listings", description: "Exchange listing support for T1 and T2 CEXs.", icon: TrendingUp },
 ];
 
 export default function Services() {
     return (
-        <section className="py-24 px-6 md:px-12 bg-white text-erika-dark">
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="max-w-7xl mx-auto"
-            >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-                    <div className="lg:col-span-1">
-                        <h2 className="font-serif text-4xl md:text-5xl mb-6">Expertise</h2>
-                        <div className="w-12 h-px bg-erika-dark/30 mb-6"></div>
-                        <p className="font-sans text-lg opacity-70 leading-relaxed">
-                            With over a decade of experience, Erika brings a refined touch and creative vision to every project, blending modern trends with timeless beauty.
-                        </p>
-                    </div>
+        <section className="py-24 px-6 bg-black relative">
+            <div className="max-w-7xl mx-auto">
+                <SectionHeader
+                    title={<>Full-Service <span className="text-accent">Incubation</span></>}
+                    subtitle="We provide end-to-end support to ensure your game succeeds in the competitive web3 market."
+                />
 
-                    <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-                        {services.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="flex flex-col"
-                            >
-                                <service.icon strokeWidth={1} className="w-8 h-8 mb-6 opacity-60" />
-                                <h3 className="font-serif text-2xl mb-4">{service.title}</h3>
-                                <p className="font-sans text-sm opacity-60 leading-relaxed max-w-sm">
-                                    {service.description}
-                                </p>
-                            </motion.div>
-                        ))}
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {services.map((service, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="p-8 rounded-2xl bg-bg-secondary border border-white/5 hover:border-accent/40 hover:bg-white/5 transition-all group"
+                        >
+                            <div className="w-12 h-12 bg-black rounded-lg border border-white/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(35,255,202,0.1)]">
+                                <service.icon size={24} />
+                            </div>
+                            <h3 className="text-xl font-bold font-gaming text-white mb-3 group-hover:text-accent transition-colors">{service.title}</h3>
+                            <p className="text-text-dim text-sm leading-relaxed">
+                                {service.description}
+                            </p>
+                        </motion.div>
+                    ))}
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }

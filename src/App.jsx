@@ -1,18 +1,26 @@
 import Hero from './components/Hero';
-// Trigger HMR update
-// import Stats from './components/Stats';
-import Ecosystem from './components/Ecosystem';
-import Features from './components/Features';
-import Partners from './components/Partners';
+import Opportunity from './components/Opportunity';
+import ValueFlow from './components/ValueFlow';
+import Ecosystem from './components/Ecosystem'; // Renamed to Portfolio on UI
+import Services from './components/Services';
+import Membership from './components/Membership';
+import Tokenomics from './components/Tokenomics';
+import Team from './components/Team';
+import CTA from './components/CTA';
 import Footer from './components/Footer';
 
 function App() {
     return (
         <main className="w-full bg-bg text-text selection:bg-accent selection:text-black">
             <Hero />
-            <Features />
+            <Opportunity />
+            <ValueFlow />
             <Ecosystem />
-            <Partners />
+            <Services />
+            <Membership />
+            <Tokenomics />
+            <Team />
+            <CTA />
             <Footer />
         </main>
     );

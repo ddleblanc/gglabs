@@ -159,9 +159,9 @@ export default function Hero() {
                                 opacity: useTransform(smoothProgress, [0, 0.1, 0.2], [1, 1, 0]),
                                 y: useTransform(smoothProgress, [0, 0.2], [0, -30])
                             }}
-                            className="hero-role"
+                            className="hero-role text-center px-4"
                         >
-                            LEVEL UP YOUR GAME
+                            BRING YOUR PROJECT TO THE NEXT LEVEL
                         </motion.p>
                     </div>
 
@@ -180,11 +180,13 @@ export default function Hero() {
                                 alt="GET GOOD"
                                 className="w-[80vw] md:w-[50vw] max-w-[800px] object-contain drop-shadow-2xl mb-4"
                             />
-                            <p className="hero-description">GG IS THE UTILITY TOKEN OF THE GG LABS PLATFORM</p>
+                            <p className="hero-description max-w-2xl">
+                                GG Labs funds, builds, and scales the next generation of Web3 gaming projects.
+                            </p>
 
                             <div className="hero-actions pointer-events-auto">
-                                <button className="hero-btn primary">WHITEPAPER</button>
-                                <button className="hero-btn secondary">BUY GG</button>
+                                <button className="hero-btn primary">REQUEST DECK</button>
+                                <button className="hero-btn secondary">LEARN MORE</button>
                             </div>
                         </motion.div>
                     </div>
@@ -222,10 +224,10 @@ export default function Hero() {
                             className="hero-stats-container w-full max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8"
                         >
                             {[
-                                { label: "Projects Incubated", value: "25+" },
-                                { label: "Total Raised", value: "$40M+" },
-                                { label: "Community", value: "250K+" },
-                                { label: "Market Cap", value: "$120M" },
+                                { label: "Portfolio Status", value: "1st Project Live" },
+                                { label: "Market Growth", value: "$44B by 2034" },
+                                { label: "Strategy", value: "Gaming Only" },
+                                { label: "Target", value: "High ROI" },
                             ].map((stat, index) => (
                                 <div key={index} className="text-center group">
                                     <h3 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 group-hover:text-accent transition-colors duration-300">
